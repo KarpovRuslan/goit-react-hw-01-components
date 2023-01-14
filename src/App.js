@@ -10,7 +10,6 @@ import transactions from './components/TransactionHistory/transactions.json';
 export default function App() {
     return (
         <>
-        <div>
             <Profile
             username={user.username}
             tag={user.tag}
@@ -18,15 +17,9 @@ export default function App() {
             avatar={user.avatar}
             stats={user.stats} 
             />
-        </div>
-
-            <div>
-                <Statistics title="Upload stats" stats={dataStat} />
-            </div>
-
-            <div><FriendList friends={friends} /></div>
-            
-            <div><TransactionHistory items={transactions} /></div>
+            <Statistics title="Upload stats" stats={dataStat} />
+            <FriendList friends={friends} />           
+            <TransactionHistory items={transactions} />
             </>
     );
 };
