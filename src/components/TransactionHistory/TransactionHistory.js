@@ -26,13 +26,13 @@ export const TransactionHistory = ({ items }) => {
 
 TransactionHistory.propTypes = {
     items: PropTypes.arrayOf(
-        PropTypes.shape(
+        PropTypes.exact(
             {
             amount: PropTypes.string.isRequired,
             id: PropTypes.string.isRequired,
             type: PropTypes.string.isRequired,
             currency: PropTypes.string.isRequired,
             }
-        )
+        ).isRequired
     )
 };
